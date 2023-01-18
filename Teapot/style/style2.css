@@ -1,0 +1,472 @@
+@import url(./normalize.css);
+body{
+    background: #95CFD5;
+}
+
+/*меню сайта*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5% 4% 0 1.5%;
+    background-color: #FFF;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    width: 40%;
+    margin: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.nav>li{
+    height: 50px;
+}
+
+.nav>li>a{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+}
+
+
+/*выпадающее меню*/
+.down:after {
+    margin-left: 8px;
+}
+
+.submenu {
+    display: flex;
+    background: white;
+    position: absolute;
+    top: 6rem;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transition: .6s ease-in-out;
+    list-style: none;
+    padding: 2% 4%;
+    justify-content: space-around;
+    width: 829px;
+    left: 17rem;
+}
+  
+.nav > li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    list-style: none;
+}
+
+h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.submenu li a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.submenu li a:hover{
+    text-decoration:underline;
+    font-weight: 600;
+}
+
+/*внутренное меню выпадающего меню*/
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box>li{
+    grid-column: 1;
+}
+
+.box>div{
+    grid-row: 1/10;
+    grid-column: 2;
+    margin-left:40px;
+}
+
+/*основная страничка*/
+section{
+    display:flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 150px;
+    color: #FFFFFF;
+    margin: 17% 0 0;
+}
+
+p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin:0;
+    width: 455px;
+}
+
+/*кнопки просмотра*/
+.btn{
+    display: flex;
+    padding: 5% 0 10% 0;
+}
+
+button{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+button:first-of-type{
+    color: #FFFFFF;
+    background-color: black;
+    padding: 0% 15%;
+    border-radius: 6px;
+    margin-right: 25px;
+}
+
+button:nth-of-type(2){
+    display:flex;
+    color: #000000;
+    width: 11rem;
+    background: center;
+    border: none;
+    justify-content: space-around;
+}
+
+.btn>button:first-of-type:hover{
+    background-color: white;
+    border:none;
+    color:#000000
+}
+
+.last-btn{
+    display:none;
+}
+
+.btn>button:nth-of-type(2):hover .first-btn{
+    display:none;
+}
+
+.btn>button:nth-of-type(2):hover .last-btn{
+    display:block;
+}
+
+/*чайники переключатели*/
+.cards{
+    display:flex;
+}
+
+.cards>div{
+    display: flex;
+    border: 1px solid #FFF;
+    border-radius: 6px;
+    margin-right: 4%;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards>:hover{
+    background-color: white;
+}
+
+/*основной чайник*/
+.right{
+    padding-top: 3%;
+    display: flex;
+}
+
+/*инпуты*/
+.block{
+    padding-top: 20%;
+}
+
+input[type='radio'] {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+
+/* адаптивность*/
+@media screen and (min-width: 377px){
+    .down:hover{
+        background-image: linear-gradient(to right, #040404 100%, transparent 100%);
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: 8px 3px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    /*header*/
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 4% 0;
+        height: 20px;
+        box-shadow: 0px 8px 5px -3px #706b72;
+    }
+
+    header>a:first-of-type{
+        grid-column: 3;
+    }
+
+    header>a:nth-of-type(3){
+        grid-column: 2;
+    }
+
+    header>a:nth-of-type(5){
+        grid-column: 4;
+    }
+
+    header>a:nth-of-type(2){
+        grid-column: 1;
+    }
+
+    header>a{
+        grid-row: 1;
+    }
+
+    .logo{
+        width: 20px;
+    }
+
+    .nav{
+        display: none;
+    }
+    .nav>li {
+        height: 55px;
+    }
+    .nav.active {
+        display: block;
+        grid-row: 2/5;
+        grid-column: 1/6;
+        padding: 0;
+        width: max-content;
+        background-color: white;
+        z-index: 2;
+        margin-top: 0.9rem;
+        width: -webkit-fill-available;
+        padding: 10px 20px;
+    }
+
+    .nav.active:hover{
+        background-color: #000000;
+    }
+
+    .nav.active:hover .down{
+        text-align: center;
+    }
+
+    .nav.active:hover .down>a{
+        color:white;
+    }
+
+/*всплывающее меню*/
+    .submenu{
+        text-align: initial;
+        display: block;
+        width: -webkit-fill-available;
+        left: 0rem;
+        top:7rem;
+        padding: 10px;
+        padding: 10px 20px;
+    }
+
+    .down:after {
+        content: "\276F";
+        text-align: right;
+        position: absolute;
+        left: 21em;
+    }
+
+    .box, .box1, .box2{
+        display: none;
+    }
+    .box.active, .box1.active, .box2.active {
+        display: block;
+        padding: 0;
+        width: max-content;
+        background-color: white;
+        z-index: 2;
+        margin-top: 0.9rem;
+        width: -webkit-fill-available;
+        padding: 10px 20px;
+    }
+
+    .box.active>div, .box1.active>div, .box2.active>div{
+        margin:0;
+    }
+
+    .more:after, .more1:after, .more2:after {
+        font-size: 20px;
+        content: "+";
+        text-align: right;
+        position: absolute;
+        left: 17em;
+    }
+
+    /*основная страничка*/
+    section{
+        flex-direction:column;
+        text-align: center;
+        width: min-content;
+        display: grid;
+        grid-column: 1;
+    }
+
+    .cards, .video, .nav{
+        display: none;
+    }
+
+    h1{
+        font-size: 80px;
+        margin-top: 10%;
+    }
+
+    h3{
+        letter-spacing: 0.2em;
+    }
+
+    p{
+        font-size: 14px;
+        width: 270px;
+        line-height: 18px;
+    }
+
+    /*основной чайник*/
+    .right{
+        justify-content: center;
+    }
+
+    .right>img{
+        width:225px;
+    }
+
+    /*кнопки просмотра*/
+    .btn{
+        justify-content: space-around;
+    }
+
+    button:last-of-type{
+        width:auto;
+    }
+
+    button:last-of-type>img{
+        width:40px;
+    }
+
+    button:first-of-type {
+        padding: 0% 19%;
+        margin: 0;
+    }
+
+    /*инпуты*/
+    .block{
+        display: flex;
+        justify-content: center;
+        padding-top: 6%;
+    }
+
+    .block>div{
+        margin: 2%;
+    }
+    
+/*делаем кнопку меню*/
+    .menu-btn{
+        display:block;
+        position:relative;
+        padding-top: 8px;
+    }
+    
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after{
+        position:absolute;
+        top:50%;
+        margin-top:-1px;
+        left:50%;
+        margin-left:-10px;
+        width:20px;
+        height:2px;
+        background-color:#222;
+  }
+  
+    .menu-btn span::before,
+    .menu-btn span::after{
+        content:'';
+        display:block;
+        transition:0.5s;
+    }
+  
+    .menu-btn span::before{
+        transform:translateY(-7px);
+    }
+    .menu-btn span::after{
+        transform:translateY(7px);
+    }
+
+}
