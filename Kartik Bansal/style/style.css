@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&family=Roboto:wght@700&family=Work+Sans:wght@500;600;700&display=swap');
+@import url(./animatuin.css);
+@import url(./normalize.css);
+
+body{
+    background-color: #212529;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5%;
+}
+.menu-btn{
+   text-decoration: none;
+   width:30%;
+   text-align: center;
+}
+.header{
+    display:flex;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    list-style: none;
+}
+.header li:hover{
+    color: #FFB742;
+}
+header > img{
+    margin-left: 2.5%;
+}
+
+button{
+    background-color: #FFB742;
+    color: #212529;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 0.7rem 2rem;
+    margin-right: 2%;
+}
+button:hover{
+    background: linear-gradient(94.3deg, #FFB742 0%, rgba(255, 123, 66, 0.76) 99.33%);
+}
+/*first section*/
+section{
+    margin-top: 8%;
+    font-family: 'Inter', sans-serif;
+}
+h3{
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.entry{
+    color: #FFF;
+    text-align: center;
+}
+span{
+    color: #FFB742;
+    border-bottom: 3px #FFB742 solid;
+}
+/*two section*/
+.cards{
+    display: flex;
+    justify-content: space-evenly; /*карточки по центру и по ширине экрана*/
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+.card{
+    color: #FFF;
+    display: flex;
+    width: 25%;
+    height: 10%;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(56, 62, 69, 0.44);
+    border-radius: 10px;
+    justify-content: space-around;
+}
+.card > img{
+    width: 64px;
+    height: 64px;
+    padding: 8%;
+}
+.text{
+    font-size: 16px;
+    margin: 0;
+    padding-top: 2%;
+}
+.numbers{
+    color: #FFB742;
+    font-size: 32px;
+    margin: 0;
+    padding-bottom: 2%;
+}
+.symbol{
+    padding: 8%;
+}
+.card:hover{
+    background: linear-gradient(94.3deg, #FFB742 0%, rgba(255, 123, 66, 0.76) 99.33%);
+    color: #212529;
+}
+.card:hover .numbers{
+    color: #212529;
+}
+/*three section*/
+.About_Me{
+    margin-top: 8%;
+    display: flex;
+}
+.About_Me >.Info{
+    padding-left: 5%;
+    padding-right: 3%;
+}
+.About_Me > img{
+    padding-top: 3%;
+}
+.Info>p:first-of-type{
+    color: #FFB742;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    width: 110px;
+    text-align: center;
+    padding: 1% 2%;
+    margin-bottom: 0;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.Info>p:last-of-type{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFF;
+    margin-bottom: 8%;
+    margin-top: 0;
+}
+.Info{
+    width: 672px;
+    margin: 0px auto;
+}
+/*four section*/
+.skills{
+    display: flex;
+    padding: 3%;
+    justify-content: space-around;
+    margin: 0;
+}
+td{
+    background-color: #383E45;
+    border-radius: 10px;
+}
+
+td:hover{
+    background-color: rgba(255, 183, 66, 0.5);
+}
+/*five section*/
+.works{
+    text-align: center;
+}
+.center{
+    color: #FFB742;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    text-align: center;
+    padding: 1% 2%;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 0;
+}
+.work{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    list-style: none;
+}
+.work li{
+    padding: 1% 3%;
+}
+.work li:hover{
+    background-color:#FFB742;
+    color: #212529;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.fotos > img{
+    padding-bottom: 5%;
+}
+.foto {
+    overflow: hidden; /* Скрываем всё за контуром */
+  }
+  .foto {
+    transition: 1s; /* Время эффекта */
+  }
+  .foto:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+}
+/*six section*/
+.star{
+    color:#FFB742;
+}
+.coment{
+    display: flex;
+}
+.coment>img{
+    width: 72px;
+    height: 72px;
+}
+.name1{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    margin-top: 5px;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.name2{
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 20px;
+}
+.testimonials> div h2{
+    text-align: center;
+}
+.testimonial{
+    background-color: rgb(253, 253, 253);
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 8px;
+    padding: 3%;
+}
+.testimonial {
+    overflow: hidden;
+  }
+  .testimonial {
+    transition: 1s; 
+  }
+  .testimonial:hover {
+    transform: scale(1.2); 
+}
+.screen{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    padding:3%
+}
+/*footer*/
+footer{
+    background-color: black;
+    font-family: 'Work Sans';
+    margin-top: 8%;
+    color: #FFF;
+    justify-content: space-around;
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+.links > h4{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #FFB742;
+}
+.links > p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+}
+.links > h5{
+    font-weight: 700;
+    color: #F5FBF2;
+}
+.links > a{
+    display: block;
+    font-weight: 500;
+    color: #7B7B7B;
+    text-decoration: none;
+}
+.links > a:hover{
+    color: #FFB742;
+}

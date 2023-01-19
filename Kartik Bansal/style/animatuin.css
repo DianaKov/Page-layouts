@@ -1,0 +1,246 @@
+@media screen and (min-width:413px){
+    h3{
+        font-size: 32px;
+        line-height: 51px;
+    }
+
+    h2{
+        font-size: 48px;
+        line-height: 91px;
+    }
+
+    .entry > p{
+        font-weight: 400;
+        line-height: 51px;
+        font-size: 24px;
+    }
+
+    table{
+        width: 645px;
+        height:176px;
+        border-spacing: 16px;
+        text-align: center;
+        padding-left: 8%;
+    }
+
+    .lorem{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+    }
+    footer{
+        display: flex;
+    }
+
+    .links > h5{
+        font-size: 21.5865px;
+        line-height: 32px;
+    }
+
+    .links > a{
+        font-size: 17.9888px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    /*делаем кнопку меню*/
+    .menu-btn{
+        display:block;
+        position:relative;
+        padding-top: 8px;
+    }
+    
+    .menu-btn .menu2,
+    .menu-btn .menu2::before,
+    .menu-btn .menu2::after{
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        width: 20px;
+        height: 2px;
+        background-color: #ffffff;
+  }
+
+
+    .menu-btn span{
+            color: #ffffff; 
+    border-bottom: 0px #ffffff solid;
+    }  
+    .menu-btn .menu2::before,
+    .menu-btn .menu2::after{
+        content:'';
+        display:block;
+        transition:0.5s;
+    }
+  
+    .menu-btn .menu2::before{
+        transform:translateY(-7px);
+    }
+    .menu-btn .menu2::after{
+        transform:translateY(7px);
+    }
+
+    /**/
+    .header.active:hover{
+        background-color: #ffffff;
+    }
+
+    .header{
+        visibility: hidden;
+    }
+    .header>li {
+        height: 30px;
+        margin: 1%;
+        padding-top: 7px;
+        background-color: #ffb74259;
+        align-items: center;
+        transform-origin: center;
+    }
+    
+    .header.active {
+        left: -10.5rem;
+        width: 405px;
+        top: 26px;
+        visibility: visible;
+        grid-template-columns: 1fr;
+        color: black;
+        position: relative;
+        display: grid;
+        padding: 0;
+        background-color: rgb(255 255 255);
+        z-index: 2;
+        margin-top: 5px;
+        align-content: center;
+    }
+
+    header > img {
+        width: 15%;
+    }
+
+    button{
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+        margin-right: 2%;
+    }
+
+    /**/
+  .skills, .container, .screen, .About_Me{
+    flex-direction: column;
+    }
+    .cards{
+        justify-content: space-evenly;
+    }
+
+    .card>div, .card>p{
+        display: none;
+    }
+
+    .card{
+        margin-top: 5%;
+        width: 30%;
+    }
+
+    .card > img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .Info {
+        display: contents;
+    }
+
+    .Info button{
+        display: none;
+    }
+
+    .table {
+        width: auto; 
+        height: auto; 
+        border-spacing: 6px;
+    }
+
+    .testimonial{
+        margin:3%;
+    }
+
+/*first section*/
+    section{
+        margin:0;
+    }
+
+    h3, h2{
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    .entry{
+        margin: 0;
+    }
+    .entry p{
+        line-height: 24px;
+        font-size: 16px;
+    }
+
+    .entry img{
+        width: 30%;
+    }
+
+/**/
+    .About_Me{
+        padding-left: 20px;
+    }
+
+    .Info>p:last-of-type {
+        width: 375px;
+    }
+
+    .fotos > img {
+        width: 70%;
+    }
+
+    .star {
+        margin: 0;
+    }
+
+    .lorem {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 3px;
+    }
+
+    .coment>img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .name1, .name2{
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    table {
+        width: auto;
+        height: auto;
+        border-spacing: 5px;
+    }
+
+footer{
+    text-align: center;
+}
+
+    .links > h4 {
+        margin: 0;
+    }
+
+    .links > h5 {
+        font-size: 16px;
+        line-height: 18px;
+        margin: 10px;
+    }
+
+    .links > a {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
