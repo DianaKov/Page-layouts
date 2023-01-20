@@ -298,7 +298,7 @@ input[type='radio']:checked::after {
         display: none;
     }
     .nav>li {
-        height: 55px;
+        height: 50px;
     }
     .nav.active {
         display: block;
@@ -311,10 +311,6 @@ input[type='radio']:checked::after {
         margin-top: 0.9rem;
         width: -webkit-fill-available;
         padding: 10px 20px;
-    }
-
-    .nav.active:hover{
-        background-color: #000000;
     }
 
     .nav.active:hover .down{
@@ -367,6 +363,10 @@ input[type='radio']:checked::after {
         text-align: right;
         position: absolute;
         left: 17em;
+    }
+
+    .more.active::after, .more2.active::after, .more1.active::after{
+        content:"-";
     }
 
     /*основная страничка*/
