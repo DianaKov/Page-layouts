@@ -248,7 +248,7 @@ input[type='radio']:checked::after {
 
 
 /* адаптивность*/
-@media screen and (min-width: 377px){
+@media screen and (min-width: 413px){
     .down:hover{
         background-image: linear-gradient(to right, #040404 100%, transparent 100%);
         background-position: bottom;
@@ -257,7 +257,7 @@ input[type='radio']:checked::after {
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 413px) {
 
     /*header*/
     header{
@@ -300,6 +300,7 @@ input[type='radio']:checked::after {
     .nav>li {
         height: 50px;
     }
+
     .nav.active {
         display: block;
         grid-row: 2/5;
@@ -331,6 +332,7 @@ input[type='radio']:checked::after {
         padding: 10px;
         padding: 10px 20px;
     }
+
 
     .down:after {
         content: "\276F";
@@ -450,8 +452,8 @@ input[type='radio']:checked::after {
         margin-top:-1px;
         left:50%;
         margin-left:-10px;
-        width:20px;
-        height:2px;
+        width:40px;
+        height:40px;
         background-color:#222;
   }
   
