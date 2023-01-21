@@ -41,20 +41,13 @@ var imageArray = ["./img/Image.png", "./img/Images.png", "./img/Image2.png","./i
 
 
     //делаем рабочей кнопку меню
-
-    document.querySelector('#sandwichmenu').onclick = function(e) {
-		e.preventDefault();
-		document.querySelector('#sandwichmenu').toggleClass("active");
-    document.querySelector('.nav').toggleClass("active");
-	};
-
-    /*$('#sandwichmenu').on('click', function(e) {
+    $('#sandwichmenu').on('click', function(e) {
 		e.preventDefault();
 		$('#sandwichmenu').toggleClass("active");
     $('.nav').toggleClass("active");
-	});*/
+	});
 
-    /*внутренний выпадающий список
+    //внутренний выпадающий список
 
     $('.more').on('click', function(e) {
 		e.preventDefault();
@@ -73,8 +66,8 @@ var imageArray = ["./img/Image.png", "./img/Images.png", "./img/Image2.png","./i
 		$('.more2').toggleClass("active");
     $('.box2').toggleClass("active");
 	});
-*/
-  /*выбор элемента в блоке меню
+
+  /*выбор элемента в блоке меню*/
     $('#down').on('click', function(e){
       e.preventDefault();
       document.getElementById("down2").style.display="none";
@@ -92,10 +85,11 @@ var imageArray = ["./img/Image.png", "./img/Images.png", "./img/Image2.png","./i
       document.getElementById("down").style.display="none";
       document.getElementById("down2").style.display="none";
     });
-*/
+
  function menu(){
   let screenObj = window.screen.width;
-  if (screenObj < 415) {
+  console.log(screenObj);
+  if (screenObj < 376) {
       document.getElementById("nav").style.backgroundColor='black';
       document.getElementById("nav").style.height="40px";
 
