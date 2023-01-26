@@ -40,56 +40,57 @@ var imageArray = ["./img/Image.png", "./img/Images.png", "./img/Image2.png","./i
 
 
 
-    //делаем рабочей кнопку меню
-    $('#sandwichmenu').on('click', function(e) {
-		e.preventDefault();
-		$('#sandwichmenu').toggleClass("active");
-    $('.nav').toggleClass("active");
-	});
+    //делаем рабочей кнопку меню*/
 
-    //внутренний выпадающий список
 
-    $('.more').on('click', function(e) {
-		e.preventDefault();
-		$('.more').toggleClass("active");
-    $('.box').toggleClass("active");
-	});
 
-  $('.more1').on('click', function(e) {
-    e.preventDefault();
-    $('.more1').toggleClass("active");
-    $('.box1').toggleClass("active");
-  });
+document.getElementById("sandwichmenu").addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById("sandwichmenu").classList.toggle("active");
+  document.querySelector(".nav").classList.toggle("active");
+});
 
-    $('.more2').on('click', function(e) {
-		e.preventDefault();
-		$('.more2').toggleClass("active");
-    $('.box2').toggleClass("active");
-	});
-
-  /*выбор элемента в блоке меню*/
-    $('#down').on('click', function(e){
+    /*внутренний выпадающий список*/
+    document.querySelector(".more").addEventListener('click', (e) => {
       e.preventDefault();
-      document.getElementById("down2").style.display="none";
-      document.getElementById("down3").style.display="none";
+      document.querySelector(".more").classList.toggle("active");
+      document.querySelector(".box").classList.toggle("active");
     });
-
-    $('#down2').on('click', function(e){
+  
+    document.querySelector(".more1").addEventListener('click', (e) => {
       e.preventDefault();
-      document.getElementById("down").style.display="none";
-      document.getElementById("down3").style.display="none";
+      document.querySelector(".more1").classList.toggle("active");
+      document.querySelector(".box1").classList.toggle("active");
     });
-
-    $('#down3').on('click', function(e){
+  
+      document.querySelector(".more2").addEventListener('click', (e) => {
       e.preventDefault();
-      document.getElementById("down").style.display="none";
-      document.getElementById("down2").style.display="none";
+      document.querySelector(".more2").classList.toggle("active");
+      document.querySelector(".box2").classList.toggle("active");
     });
+  
+   //выбор элемента в блоке меню 
+      document.getElementById("down").addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById("down2").style.display="none";
+        document.getElementById("down3").style.display="none";
+      });
+  
+      document.getElementById("down2").addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById("down").style.display="none";
+        document.getElementById("down3").style.display="none";
+      });
+  
+      document.getElementById("down3").addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById("down").style.display="none";
+        document.getElementById("down2").style.display="none";
+      });
 
  function menu(){
   let screenObj = window.screen.width;
-  console.log(screenObj);
-  if (screenObj < 376) {
+  if (screenObj < 415) {
       document.getElementById("nav").style.backgroundColor='black';
       document.getElementById("nav").style.height="40px";
 
