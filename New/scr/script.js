@@ -55,14 +55,14 @@ function subMenu(a,b){
 }
 
 subMenu(".more",".box");
-/*subMenu(".more1",".box1");
+subMenu(".more1",".box1");
 subMenu(".more2",".box2");
 subMenu(".more3",".box3");
 subMenu(".more4",".box4");
 subMenu(".more5",".box5");
 subMenu(".more6",".box6");
 subMenu(".more7",".box7");
-subMenu(".more8",".box8");*/
+subMenu(".more8",".box8");
 
 // при выборе одного из трех пунктов меню, он меня он на черный, цвет текста белый, находиться по средине
 function menu(){
