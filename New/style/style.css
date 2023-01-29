@@ -16,7 +16,7 @@ header{
     justify-content: space-between;
     list-style: none;
     align-items: center;
-    width: 40%;
+    width: 100%;
     margin: 0;
     padding-left: 20%;
     padding-right: 20%;
@@ -36,6 +36,9 @@ header{
     text-decoration: none;
 }
 
+.logo{
+    padding: 0 2%;
+}
 
 /*выпадающее меню*/
 .down:after {
@@ -89,16 +92,16 @@ h3{
 }
 
 /*внутренное меню выпадающего меню*/
-.box{
+.box,.box3,.box6{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.box>li{
+.box>li, .box3>li,.box6>li{
     grid-column: 1;
 }
 
-.box>div{
+.box>div,.box3>div, .box6>div{
     grid-row: 1/10;
     grid-column: 2;
     margin-left:40px;
@@ -246,6 +249,88 @@ input[type='radio']:checked::after {
   visibility: visible;
 }
 
+/*search*/
+form {
+    height: 35px;
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    top: -0.5vh;
+  }
+  .inputSearch {
+    height: 100%;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .inputSearch:focus {
+    width: 300px;
+    z-index: 1;
+    border: 2px solid #F9F0DA;
+    border-radius: 20px;
+  }
+  button[type=submit] {
+    background: white;
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  button[type=submit]:before {
+    content: url(../img/1.svg);
+    font-size: 16px;
+    color: #F9F0DA;
+  }
+
+  /*user*/
+  .private{
+    margin: 0 auto;
+    background: linear-gradient(180deg, #859EFF 0%, rgba(105, 255, 210, 0.5) 100%);
+}
+.private_left{
+    padding-top: 3%;
+}
+.private_left>div{
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+.private_left>div>button{
+    padding: 0.5rem 1rem;
+    width: 276px;
+}
+.private_left>div>button:hover{
+    background-color: white;
+    color:black
+}
+.private_left>div>img{
+    width:20%;
+}
+
+.private_right>p{
+    font-style: italic;
+    font-weight: 700;
+    color: #353C57;
+    margin: 1rem 3rem;
+}
+.private_right>hr{
+    width:25rem;
+}
+.private_right {
+    padding-bottom: 1rem;
+}
+
+
+
 
 /* адаптивность*/
 @media screen and (max-width:1920px){
@@ -254,6 +339,9 @@ input[type='radio']:checked::after {
         background-position: bottom;
         background-repeat: repeat-x;
         background-size: 8px 3px;
+    }
+    .private_right>p{
+        font-size: 22px;
     }
 }
 @media screen and (max-width:1025px){
@@ -329,7 +417,7 @@ input[type='radio']:checked::after {
         grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
         justify-items: center;
         align-items: center;
-        padding: 4% 0;
+        padding: 4% 5% 7% 5%;
         height: 20px;
         box-shadow: 0px 8px 5px -3px #706b72;
     }
@@ -338,11 +426,7 @@ input[type='radio']:checked::after {
         grid-column: 3;
     }
 
-    header>a:nth-of-type(3){
-        grid-column: 2;
-    }
-
-    header>a:nth-of-type(5){
+    header>a:nth-of-type(4){
         grid-column: 4;
     }
 
@@ -374,7 +458,7 @@ input[type='radio']:checked::after {
         background-color: white;
         z-index: 2;
         margin-top: 0.9rem;
-        width: -webkit-fill-available;
+        width: 100%;
         padding: 10px 20px;
     }
 
@@ -382,7 +466,26 @@ input[type='radio']:checked::after {
         text-align: center;
     }
 
+    /*search*/
+    button[type=submit] {
+        height: 30px;
+    }
 
+    form{
+        width:auto;
+        grid-column: 2;
+        grid-row: 1;
+        top: 0.5vh;
+        padding-left: 2rem;
+    }
+
+    .inputSearch {
+        padding: 2px;
+        background: white;
+        top: -1vh;
+        position:relative;
+        z-index: 5;
+    }
 /*всплывающее меню*/
 
     .down:after {
@@ -484,7 +587,33 @@ input[type='radio']:checked::after {
 
     .block>div{
         margin: 2%;
-    }   
+    }  
+
+    /*модальные окна*/
+
+    .closeBtn, .closeBtnUser {
+        position: absolute;
+        top: 14px;
+        right: 28px;
+    }
+
+    .wrapper, .wrapperUser{
+        top: 0vh;
+    }
+    .modal {
+        max-width: 300px;
+        max-height: 300px;
+        background-size: 300px !important;
+    }
+
+    .modalUser{
+        max-width: 325px;
+        max-height: 460px;
+    }
+
+    .private_right>p{
+        font-size: 14px;
+    }
 
 }
 
