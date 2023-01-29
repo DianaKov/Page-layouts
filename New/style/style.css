@@ -516,9 +516,10 @@ form {
         content: "+";
         left: 17em;
         padding-left: 5%;
+        position:absolute;
     }
 
-    .more.active::after, .more2.active::after, .more1.active::after, .more3.active::after
+    .more.active::after, .more2.active::after, .more1.active::after, .more3.active::after,
     .more4.active::after, .more5.active::after, .more6.active::after, .more7.active::after, .more8.active::after{
         content:"-";
     }
