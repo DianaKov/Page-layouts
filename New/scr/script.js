@@ -1,41 +1,45 @@
 //смена цветов при клике на чайники или инпуты
 var image = document.getElementById('imagetest');
 var imageArray = ["./img/Image.png", "./img/Images.png", "./img/Image2.png","./img/Image3.png"];
-var kettles = document.getElementById(["btn-prev", "btn-prev1", "btn-prev2","btn-prev3"]);
-var choice = document.getElementById(["сhoice", "сhoice2", "сhoice3", "сhoice4"]);
-var color = ['white', '#95CFD5', '#C42129', '#E0ADC5', '#F5C7B3'];
 let screenObj = window.screen.width;
 let nav = document.getElementById("nav");
 
 function showColorBlue() {
-  document.body.style.backgroundColor = color[1];
-  image.src = imageArray[0];
-  choice[0].checked = true;
-  kettles[0].style.backgroundColor=color[0];
-  kettles[1][2][3].style.backgroundColor=color[1];
+  document.body.style.backgroundColor = '#95CFD5';
+  imagetest.src = imageArray[0];
+  document.getElementById("сhoice").checked = true;
+  document.getElementById("btn-prev").style.backgroundColor='white';
+  document.getElementById("btn-prev3").style.backgroundColor='#95CFD5';
+  document.getElementById("btn-prev2").style.backgroundColor='#95CFD5';
+  document.getElementById("btn-prev1").style.backgroundColor='#95CFD5';
 }
 function showColorRed() {
-  document.body.style.backgroundColor = color[2];
-  image.src = imageArray[1];
-  choice[1].checked = true;
-  kettles[1].style.backgroundColor=color[0];
-  kettles[0][2][3].style.backgroundColor=color[2];
+  document.body.style.backgroundColor = '#C42129';
+  imagetest.src = imageArray[1];
+  document.getElementById("сhoice2").checked = true;
+  document.getElementById("btn-prev1").style.backgroundColor='white';
+  document.getElementById("btn-prev").style.backgroundColor='#C42129';
+  document.getElementById("btn-prev2").style.backgroundColor='#C42129';
+  document.getElementById("btn-prev3").style.backgroundColor='#C42129';
 }
 function showColorPink() {
-  document.body.style.backgroundColor = color[3];
-  image.src = imageArray[2];
-  choice[2].checked = true;
-  kettles[2].style.backgroundColor=color[0];
-  kettles[0][1][3].style.backgroundColor=color[3];
+  document.body.style.backgroundColor = '#E0ADC5';
+  imagetest.src = imageArray[2];
+  document.getElementById("сhoice3").checked = true;
+  document.getElementById("btn-prev2").style.backgroundColor='white';
+  document.getElementById("btn-prev1").style.backgroundColor='#E0ADC5';
+  document.getElementById("btn-prev").style.backgroundColor='#E0ADC5';
+  document.getElementById("btn-prev3").style.backgroundColor='#E0ADC5';
 }
 function showColorBeige() {
-  document.body.style.backgroundColor = color[4];
-  image.src = imageArray[3];
-  choice[3].checked = true;
-  kettles[3].style.backgroundColor=color[0];
-  kettles[0][1][2].style.backgroundColor=color[4];
+  document.body.style.backgroundColor = '#F5C7B3';
+  imagetest.src = imageArray[3];
+  document.getElementById("сhoice4").checked = true;
+  document.getElementById("btn-prev3").style.backgroundColor='white';
+  document.getElementById("btn-prev2").style.backgroundColor='#F5C7B3';
+  document.getElementById("btn-prev1").style.backgroundColor='#F5C7B3';
+  document.getElementById("btn-prev").style.backgroundColor='#F5C7B3';
 }
-
 //мобильная версия
 
 //делаем кликабельно кнопку меню
