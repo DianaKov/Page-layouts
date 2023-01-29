@@ -82,20 +82,14 @@ var down = document.getElementById("down");
 var down2 = document.getElementById("down2");
 var down3 = document.getElementById("down3");
 
-down.addEventListener('click', (e) => {
-  e.preventDefault();
-  down2.style.display="none";
-  down3.style.display="none";
-});
+function sample (a,b,c){
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    b.style.display="none";
+    c.style.display="none";
+  });
+}
 
-down2.addEventListener('click', (e) => {
-  e.preventDefault();
-  down.style.display="none";
-  down3.style.display="none";
-});
-
-down3.addEventListener('click', (e) => {
-  e.preventDefault();
-  down.style.display="none";
-  down2.style.display="none";
-});
+sample(down,down2,down3);
+sample(down2,down,down3);
+sample(down3,down,down2);
