@@ -440,10 +440,19 @@ form {
 
     .menu-btn span::before{
         transform:translateY(-7px);
+        transition: none;
     }
     .menu-btn span::after{
         transform:translateY(7px);
+        transition: none;
     }
+
+    .menu-btn.active span,
+    .menu-btn.active span::before,
+    .menu-btn.active span::after{
+        transform: rotate(60deg);
+        transition: none;
+  }
 
      /*header*/
      header{
