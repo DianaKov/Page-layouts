@@ -16,7 +16,7 @@ header{
     justify-content: space-between;
     list-style: none;
     align-items: center;
-    width: 40%;
+    width: 100%;
     margin: 0;
     padding-left: 20%;
     padding-right: 20%;
@@ -36,7 +36,44 @@ header{
     text-decoration: none;
 }
 
+.logo{
+    padding: 0 2%;
+}
 
+/**/
+.wrapper, .wrapperUser{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    z-index: 6;
+}
+.modal{
+    height: 500px;
+    width: 500px;
+    background: url(../img/photo_2023-01-29_14-46-32.jpg);
+    background-size: 500px;
+    position: relative;
+}
+.modalUser{
+    height: 535px;
+    width: 535px;
+    background: white;
+    position: relative;
+}
+.closeBtn, .closeBtnUser{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.hide{
+    display: none!important;
+}
 /*выпадающее меню*/
 .down:after {
     margin-left: 8px;
@@ -89,16 +126,16 @@ h3{
 }
 
 /*внутренное меню выпадающего меню*/
-.box{
+.box,.box3,.box6{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.box>li{
+.box>li, .box3>li,.box6>li{
     grid-column: 1;
 }
 
-.box>div{
+.box>div,.box3>div, .box6>div{
     grid-row: 1/10;
     grid-column: 2;
     margin-left:40px;
@@ -246,26 +283,175 @@ input[type='radio']:checked::after {
   visibility: visible;
 }
 
+/*search*/
+form {
+    height: 35px;
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    top: -0.5vh;
+  }
+  .inputSearch {
+    height: 100%;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .inputSearch:focus {
+    width: 300px;
+    z-index: 1;
+    border: 2px solid #F9F0DA;
+    border-radius: 20px;
+  }
+  button[type=submit] {
+    background: white;
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  button[type=submit]:before {
+    content: url(../img/1.svg);
+    font-size: 16px;
+    color: #F9F0DA;
+  }
+
+  /*user*/
+  .private{
+    margin: 0 auto;
+    background: linear-gradient(180deg, #859EFF 0%, rgba(105, 255, 210, 0.5) 100%);
+}
+.private_left{
+    padding-top: 3%;
+}
+.private_left>div{
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+.private_left>div>button{
+    padding: 0.5rem 1rem;
+    width: 276px;
+}
+.private_left>div>button:hover{
+    background-color: white;
+    color:black
+}
+.private_left>div>img{
+    width:20%;
+}
+
+.private_right>p{
+    font-style: italic;
+    font-weight: 700;
+    color: #353C57;
+    margin: 1rem 3rem;
+}
+.private_right>hr{
+    width:25rem;
+}
+.private_right {
+    padding-bottom: 1rem;
+}
+
+
+
 
 /* адаптивность*/
-@media screen and (min-width: 377px){
+@media screen and (max-width:1920px){
     .down:hover{
         background-image: linear-gradient(to right, #040404 100%, transparent 100%);
         background-position: bottom;
         background-repeat: repeat-x;
         background-size: 8px 3px;
     }
+    .private_right>p{
+        font-size: 22px;
+    }
 }
-
-@media screen and (max-width: 376px) {
+@media screen and (max-width:1025px){
+    /*всплывающее меню*/
+    .submenu{
+        text-align: initial;
+        display: block;
+        width: -webkit-fill-available;
+        left: 0rem;
+        top:8rem;
+        padding: 10px;
+        padding: 10px 20px;
+    }
 
     /*header*/
-    header{
+    .nav{
+        padding: 0px;
+    }
+
+    /*section*/
+    .left>p{
+        width: auto;
+    }
+
+    .left>h1{
+        font-size: 100px;
+    }
+
+    .block {
+        padding-top: 35%;
+    }
+
+}
+@media screen and (max-width:769px){
+
+    /*делаем кнопку меню*/
+    .menu-btn{
+        display:block;
+        position:relative;
+        padding-top: 8px;
+    }
+    
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after{
+        position:absolute;
+        top:50%;
+        margin-top:-1px;
+        left:50%;
+        margin-left:-10px;
+        width:20px;
+        height:2px;
+        background-color:#222;
+  }
+  
+    .menu-btn span::before,
+    .menu-btn span::after{
+        content:'';
+        display:block;
+        transition:0.5s;
+    }
+
+    .menu-btn span::before{
+        transform:translateY(-7px);
+    }
+    .menu-btn span::after{
+        transform:translateY(7px);
+    }
+
+     /*header*/
+     header{
         display: grid;
         grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
         justify-items: center;
         align-items: center;
-        padding: 4% 0;
+        padding: 4% 5% 7% 5%;
         height: 20px;
         box-shadow: 0px 8px 5px -3px #706b72;
     }
@@ -274,11 +460,7 @@ input[type='radio']:checked::after {
         grid-column: 3;
     }
 
-    header>a:nth-of-type(3){
-        grid-column: 2;
-    }
-
-    header>a:nth-of-type(5){
+    header>a:nth-of-type(4){
         grid-column: 4;
     }
 
@@ -300,6 +482,7 @@ input[type='radio']:checked::after {
     .nav>li {
         height: 50px;
     }
+
     .nav.active {
         display: block;
         grid-row: 2/5;
@@ -309,40 +492,50 @@ input[type='radio']:checked::after {
         background-color: white;
         z-index: 2;
         margin-top: 0.9rem;
-        width: -webkit-fill-available;
+        width: 100%;
         padding: 10px 20px;
     }
 
     .nav.active:hover .down{
         text-align: center;
     }
-
-    .nav.active:hover .down>a{
-        color:white;
+    .nav.active:hover{
+        background-color: black;
+    }
+    .nav.active:hover #txt, .nav.active:hover #txt1, .nav.active:hover #txt2{
+        color: white;
     }
 
+    /*search*/
+    button[type=submit] {
+        height: 30px;
+    }
+
+    form{
+        width:auto;
+        grid-column: 2;
+        grid-row: 1;
+        top: 0.5vh;
+        padding-left: 2rem;
+    }
+
+    .inputSearch {
+        padding: 2px;
+        background: white;
+        top: -1vh;
+        position:relative;
+        z-index: 5;
+    }
 /*всплывающее меню*/
-    .submenu{
-        text-align: initial;
-        display: block;
-        width: -webkit-fill-available;
-        left: 0rem;
-        top:7rem;
-        padding: 10px;
-        padding: 10px 20px;
-    }
 
     .down:after {
         content: "\276F";
-        text-align: right;
-        position: absolute;
-        left: 21em;
     }
 
-    .box, .box1, .box2{
+    .box, .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8{
         display: none;
     }
-    .box.active, .box1.active, .box2.active {
+    .box.active, .box1.active, .box2.active, .box3.active, .box4.active, .box5.active, .box6.active, .box7.active, .box8.active    {
         display: block;
         padding: 0;
         width: max-content;
@@ -353,19 +546,21 @@ input[type='radio']:checked::after {
         padding: 10px 20px;
     }
 
-    .box.active>div, .box1.active>div, .box2.active>div{
+    .box.active>div, .box1.active>div, .box2.active>div, .box3.active>div, .box4.active>div, .box5.active>div, .box6.active>div, 
+    .box7.active>div, .box8.active>div{
         margin:0;
     }
 
-    .more:after, .more1:after, .more2:after {
+    .more::after, .more1:after, .more2:after, .more3:after, .more4:after, .more5:after, .more6:after, .more7:after, .more8:after  {
         font-size: 20px;
         content: "+";
-        text-align: right;
-        position: absolute;
         left: 17em;
+        padding-left: 5%;
+        position:absolute;
     }
 
-    .more.active::after, .more2.active::after, .more1.active::after{
+    .more.active::after, .more2.active::after, .more1.active::after, .more3.active::after,
+    .more4.active::after, .more5.active::after, .more6.active::after, .more7.active::after, .more8.active::after{
         content:"-";
     }
 
@@ -433,40 +628,48 @@ input[type='radio']:checked::after {
 
     .block>div{
         margin: 2%;
+    }  
+
+    /*модальные окна*/
+
+    .closeBtn, .closeBtnUser {
+        position: absolute;
+        top: 14px;
+        right: 28px;
     }
-    
-/*делаем кнопку меню*/
-    .menu-btn{
-        display:block;
-        position:relative;
-        padding-top: 8px;
+
+    .wrapper, .wrapperUser{
+        top: 0vh;
     }
-    
-    .menu-btn span,
-    .menu-btn span::before,
-    .menu-btn span::after{
-        position:absolute;
-        top:50%;
-        margin-top:-1px;
-        left:50%;
-        margin-left:-10px;
-        width:20px;
-        height:2px;
-        background-color:#222;
-  }
-  
-    .menu-btn span::before,
-    .menu-btn span::after{
-        content:'';
-        display:block;
-        transition:0.5s;
+    .modal {
+        max-width: 300px;
+        max-height: 300px;
+        background-size: 300px !important;
     }
-  
-    .menu-btn span::before{
-        transform:translateY(-7px);
+
+    .modalUser{
+        max-width: 325px;
+        max-height: 460px;
     }
-    .menu-btn span::after{
-        transform:translateY(7px);
+
+    .private_right>p{
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (max-width: 415px) {
+    /*всплывающее меню*/
+    .down:after {
+        text-align: right;
+        position: absolute;
+        left: 21em;
+    }
+
+    .more:after, .more1:after, .more2:after {
+        text-align: right;
+        position: absolute;
     }
 
 }
