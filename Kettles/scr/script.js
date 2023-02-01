@@ -8,39 +8,33 @@ function showColorBlue() {
   document.body.style.backgroundColor = '#95CFD5';
   imagetest.src = imageArray[0];
   document.getElementById("сhoice").checked = true;
-  document.getElementById("btn-prev").style.backgroundColor='white';
-  document.getElementById("btn-prev3").style.backgroundColor='#95CFD5';
-  document.getElementById("btn-prev2").style.backgroundColor='#95CFD5';
-  document.getElementById("btn-prev1").style.backgroundColor='#95CFD5';
 }
 function showColorRed() {
   document.body.style.backgroundColor = '#C42129';
   imagetest.src = imageArray[1];
   document.getElementById("сhoice2").checked = true;
-  document.getElementById("btn-prev1").style.backgroundColor='white';
-  document.getElementById("btn-prev").style.backgroundColor='#C42129';
-  document.getElementById("btn-prev2").style.backgroundColor='#C42129';
-  document.getElementById("btn-prev3").style.backgroundColor='#C42129';
 }
 function showColorPink() {
   document.body.style.backgroundColor = '#E0ADC5';
   imagetest.src = imageArray[2];
   document.getElementById("сhoice3").checked = true;
-  document.getElementById("btn-prev2").style.backgroundColor='white';
-  document.getElementById("btn-prev1").style.backgroundColor='#E0ADC5';
-  document.getElementById("btn-prev").style.backgroundColor='#E0ADC5';
-  document.getElementById("btn-prev3").style.backgroundColor='#E0ADC5';
 }
 function showColorBeige() {
   document.body.style.backgroundColor = '#F5C7B3';
   imagetest.src = imageArray[3];
   document.getElementById("сhoice4").checked = true;
-  document.getElementById("btn-prev3").style.backgroundColor='white';
-  document.getElementById("btn-prev2").style.backgroundColor='#F5C7B3';
-  document.getElementById("btn-prev1").style.backgroundColor='#F5C7B3';
-  document.getElementById("btn-prev").style.backgroundColor='#F5C7B3';
 }
 
+function showColorWhite(a){
+  document.querySelector(a).addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector(a).style.backgroundColor='white';;
+  });
+}
+showColorWhite("сhoice");
+showColorWhite("сhoice2");
+showColorWhite("сhoice3");
+showColorWhite("сhoice4");
 //мобильная версия
 
 //делаем кликабельно кнопку меню
